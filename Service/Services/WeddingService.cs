@@ -1,10 +1,7 @@
-﻿using Presistent;
+﻿using Domain.Models;
+using Microsoft.EntityFrameworkCore;
+using Presistent;
 using Service.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service.Services
 {
@@ -16,15 +13,19 @@ namespace Service.Services
         {
             _context = context;
         }
-        public async Task<List<object>> GetAll()
+        public async Task<List<Wedding>> GetAll(CancellationToken cancellationToken)
         {
-            var weddingList = await _context 
+            var weddingList = await _context.Wedding.ToListAsync(cancellationToken);
+
+            return weddingList;
 
         }
 
-        public Task<object> GetById(int id)
+        public async Task<Wedding> GetById(int id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var getWedding = await _context.Wedding.FirstOrDefaultAsync(w => w.Id == id, cancellationToken);
+
+            return getWedding;
         }
     }
 }

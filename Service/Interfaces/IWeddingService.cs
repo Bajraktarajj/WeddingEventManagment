@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Models;
 
 namespace Service.Interfaces
 {
     public interface IWeddingService
     {
-        Task<object> GetById(int id);
+        Task<Wedding> GetById(int id, CancellationToken cancellationToken);
 
-        Task<List<object>> GetAll();
+        Task<List<Wedding>> GetAll(CancellationToken cancellationToken);
     }
 }

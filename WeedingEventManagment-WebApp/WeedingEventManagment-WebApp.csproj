@@ -14,17 +14,6 @@
 	<ItemGroup>
 		<None Include="wwwroot\img\after-s.png" />
 		<None Include="wwwroot\img\coupleee.png" />
-		<None Include="wwwroot\img\f1.png" />
-		<None Include="wwwroot\img\f2.png" />
-		<None Include="wwwroot\img\f3.png" />
-		<None Include="wwwroot\img\f4,png.jpg" />
-		<None Include="wwwroot\img\f5,png.jpg" />
-		<None Include="wwwroot\img\f6.png" />
-		<None Include="wwwroot\img\ftt.png" />
-		<None Include="wwwroot\img\logo.png" />
-		<None Include="wwwroot\img\ss1.png" />
-		<None Include="wwwroot\img\ss2.png" />
-		<None Include="wwwroot\img\ss3.png" />
 	</ItemGroup>
 
 	<ItemGroup>

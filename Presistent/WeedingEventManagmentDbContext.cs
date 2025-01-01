@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Presistent
 {
@@ -8,7 +9,6 @@ namespace Presistent
             : base(options) {
         }
         
-        public virtual DbSet<Wedding> Patient { get; set; }
-
+        public virtual DbSet<Wedding> Wedding { get; set; }
     }
 }
