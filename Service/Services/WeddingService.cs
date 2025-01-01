@@ -19,6 +19,7 @@ namespace Service.Services
 
             return weddingList;
 
+
         }
 
         public async Task<Wedding> GetById(int id, CancellationToken cancellationToken)
