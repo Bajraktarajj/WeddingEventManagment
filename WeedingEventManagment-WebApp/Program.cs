@@ -15,7 +15,6 @@ builder.Services.RegisterDbContext(_configuration);
 builder.Services.AddScoped<IWeddingService, WeddingService>();
 //builder.Services.AddRazorPages();
 
-
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
