@@ -3,21 +3,24 @@ Arkitektura Onion është një model i organizimit të kodit që ndihmon në nda
 
 1. 01_Web (Shtresa e Prezantimit)
 Roli: Kjo shtresë është përgjegjëse për ndërfaqen e përdoruesit dhe për përpunimin e kërkesave që vijnë nga përdoruesit. Përmban:
-
 Controllers: Përfshijnë HomeController.cs dhe WeddingController.cs, të cilat merren me kërkesat HTTP dhe drejtojnë logjikën në shërbime përkatëse.
 Views: Dosja Pages përmban Index.cshtml, ku paraqiten të dhënat në nivel UI (User Interface).
 wwwroot: Përmban burimet statike, si CSS, JavaScript, dhe imazhe.
 appsettings.json: Ky file ruan konfigurimet për aplikacionin, si lidhjet me bazën e të dhënave dhe konfigurimet e tjera të përgjithshme.
+
+
 2. 02_Domain (Shtresa e Domainit)
 Roli: Kjo është shtresa më e brendshme dhe përmban entitetet bazë të domenit dhe logjikën biznesore thelbësore. Kjo shtresë nuk ka varësi nga pjesët e tjera të sistemit. Disa shembuj të entiteteve në këtë projekt janë:
-
 MainApp: Përcakton informacionin bazik të aplikacionit.
 Wedding, Client, Services, VenueDecoration, Photography: Janë entitete që modelojnë domenin e menaxhimit të dasmave.
 User dhe Staff: Përfaqësojnë përdoruesit dhe stafin në sistem.
+
+
 3. 03_Service (Shtresa e Shërbimeve)
 Roli: Përmban logjikën e biznesit që shërben si ndërmjetës midis shtresës së prezantimit dhe shtresës së të dhënave. Kjo shtresë përfshin:
-
 Shërbimet (Services): Këtu implementohen operacionet që përpunojnë të dhënat dhe i dërgojnë ato në shtresën Web.
+
+
 4. 04_Persistent (Shtresa e Qasjes në të Dhëna)
 Roli: Përgjegjëse për ruajtjen dhe qasjen në të dhëna. Kjo shtresë përmban:
 
