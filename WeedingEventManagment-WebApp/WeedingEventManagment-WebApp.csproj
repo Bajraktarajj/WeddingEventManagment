@@ -8,10 +8,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Folder Include="wwwroot\img\" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<None Include="wwwroot\img\after-s.png" />
 		<None Include="wwwroot\img\coupleee.png" />
 	</ItemGroup>
