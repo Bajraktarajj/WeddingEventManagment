@@ -1,6 +1,6 @@
-using Microsoft.OpenApi.Models;
-using Service;
-using Service.Interfaces;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Service.Interfaces;  // For your services
 using Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);

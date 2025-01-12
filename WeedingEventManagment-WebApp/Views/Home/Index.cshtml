@@ -157,14 +157,12 @@
 
     <!-- Contact Section -->
     <div class="container">
-        <section id="contact">
-            <h2 style="text-align: center;">Contact Us</h2>
-            <form style="max-width: 600px; margin: 0 auto; text-align: center;">
-                <input type="text" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ddd;">
-                <input type="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ddd;">
-                <textarea placeholder="Your Message" rows="5" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
-                <button type="submit" style="background-color: #ff6f61; color: white; border: none; padding: 10px 20px; font-size: 18px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Send</button>
-            </form>
+        <form action="/contact/submit" method="post" style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <input type="text" name="Name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ddd;">
+            <input type="email" name="Email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ddd;">
+            <textarea name="Message" placeholder="Your Message" rows="5" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
+            <button type="submit" style="background-color: #ff6f61; color: white; border: none; padding: 10px 20px; font-size: 18px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Send</button>
+        </form>
         </section>
     </div>
 

@@ -10,14 +10,22 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_Domain", "02_Domain", "{E1E8412D-413B-4817-A8D8-C6BEBCF268B9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_Service", "03_Service", "{1D93D91C-1F9F-436E-893F-6262498D2440}"
+	ProjectSection(SolutionItems) = preProject
+		ContactService.cs = ContactService.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Presistent", "04_Presistent", "{9528BE53-FCCD-4005-BBFA-DBABDD0638D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{C75E00CE-7EAC-46D6-ADE9-651F6565DA4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{C75E00CE-7EAC-46D6-ADE9-651F6565DA4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{C6044E88-4A82-4511-AF8D-64F1EE8FAA2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{C6044E88-4A82-4511-AF8D-64F1EE8FAA2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presistent", "Presistent\Presistent.csproj", "{73781DE3-AAE0-45C4-ADB3-F628453EF6EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presistent", "Presistent\Presistent.csproj", "{73781DE3-AAE0-45C4-ADB3-F628453EF6EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extension", "Extension", "{08BBBE75-FF2E-4B5B-AACB-D21A1F4E3F8C}"
+	ProjectSection(SolutionItems) = preProject
+		ServiceExtensions.cs = ServiceExtensions.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
