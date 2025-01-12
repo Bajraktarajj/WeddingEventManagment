@@ -2,10 +2,10 @@
 
 namespace WeedingEventManagment_WebApp.Controllers
 {
-    [ApiController]
+ //   [ApiController]
     public class HomeController : Controller
     {
-        [HttpGet("index")]
+      //  [HttpGet("index")]
         public IActionResult Index()
         {
 
