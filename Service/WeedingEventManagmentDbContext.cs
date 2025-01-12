@@ -8,5 +8,5 @@ public class WeedingEventManagmentDbContext : DbContext
         : base(options) { }
 
     public DbSet<Contact> Contacts { get; set; }
-    public DbSet<Wedding> Wedding { get; set; } // Ensure this property is defined for Wedding as well
+    public DbSet<Wedding> Wedding { get; set; } 
 }

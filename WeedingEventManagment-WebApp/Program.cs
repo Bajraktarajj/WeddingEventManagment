@@ -1,23 +1,29 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Service.Interfaces;  // For your services
+using Microsoft.EntityFrameworkCore;
+using Service.Interfaces;
 using Service.Services;
+using Domain.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Read configuration from appsettings.json
 var _configuration = builder.Configuration;
 
+// Register DbContext directly with the correct connection string
+builder.Services.AddDbContext<WeedingEventManagmentDbContext>(options =>
+    options.UseSqlServer(_configuration.GetConnectionString("DatabaseConnection")));
+
+// Add controllers and Razor Pages
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();
-
-//builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerGen(c =>
-//    c.SwaggerDoc("v1", new OpenApiInfo {  Title = "WeddingApp", Version = "v1" }));
-
-builder.Services.RegisterDbContext(_configuration);
+// Register custom services directly
 builder.Services.AddScoped<IWeddingService, WeddingService>();
+builder.Services.AddScoped<IContactService, ContactService>();
 
 var app = builder.Build();
 
+// Middleware and routing setup
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
@@ -29,28 +35,12 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapRazorPages();
-
-//app.MapDefaultControllerRoute();
-//app.UseSwagger();
-//app.UseSwaggerUI();
-
-//app.UseEndpoints(endpoints =>
-//{
-//    endpoints.MapGet("/", async context =>
-//    {
-//        context.Response.Redirect("/swagger", permanent: false);
-//        await Task.CompletedTask;
-//    });
-
-//    endpoints.MapControllers();
-//});
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}"
 );
-
-
 
 app.Run();

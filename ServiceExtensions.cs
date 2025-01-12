@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using YourNamespace.Data; // Replace with your actual namespace containing the DbContext class
+using Services.Data; // Replace with your actual namespace containing the DbContext class
 
 namespace YourNamespace.Extensions // Replace with your actual namespace
 {
