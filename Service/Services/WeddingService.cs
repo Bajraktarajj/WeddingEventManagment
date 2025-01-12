@@ -1,6 +1,5 @@
 ﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using Presistent;
 using Service.Interfaces;
 
 namespace Service.Services

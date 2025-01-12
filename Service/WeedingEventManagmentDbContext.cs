@@ -1,6 +1,6 @@
 ﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using Domain.Models;  // Ensure this matches the namespace where Contact is defined
+using Domain.Models;
 
 public class WeedingEventManagmentDbContext : DbContext
 {
@@ -8,4 +8,5 @@ public class WeedingEventManagmentDbContext : DbContext
         : base(options) { }
 
     public DbSet<Contact> Contacts { get; set; }
+    public DbSet<Wedding> Wedding { get; set; } // Ensure this property is defined for Wedding as well
 }

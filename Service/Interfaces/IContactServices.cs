@@ -1,4 +1,6 @@
-﻿namespace Service.Interfaces
+﻿using Domain.Models; // Add this to reference the Contact model
+
+namespace Service.Interfaces
 {
     public interface IContactService
     {

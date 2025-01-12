@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Service.Interfaces;
-using Service.Models;
+using Domain.Models;
 
 namespace WeedingEventManagment_WebApp.Controllers
 {
