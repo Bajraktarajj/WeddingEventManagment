@@ -28,5 +28,18 @@ namespace Service.Services
 
             return getWedding;
         }
+
+        public Wedding CreateWedding(string type)
+        {
+            switch (type)
+            {
+                case "Traditional":
+                    return new TraditionalWedding();
+                case "Modern":
+                    return new ModernWedding();
+                default:
+                    throw new ArgumentException("Unknown wedding type.");
+            }
+        }
     }
 }

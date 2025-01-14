@@ -9,7 +9,7 @@ var _configuration = builder.Configuration;
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 
-//builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen(c =>
 //    c.SwaggerDoc("v1", new OpenApiInfo {  Title = "WeddingApp", Version = "v1" }));
 
@@ -31,7 +31,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapRazorPages();
 
-//app.MapDefaultControllerRoute();
+app.MapDefaultControllerRoute();
 //app.UseSwagger();
 //app.UseSwaggerUI();
 

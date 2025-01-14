@@ -1,10 +1,7 @@
-﻿namespace Domain.Models
+﻿namespace Domain.ViewModels
 {
-    // Kjo është klasa e fabrikes që krijon dasma të ndryshme
-    public abstract class Wedding
+    public class WeddingViewModel
     {
-        public int Id { get; set; }
-
         public string BrideName { get; set; }
 
         public string GroomName { get; set; }

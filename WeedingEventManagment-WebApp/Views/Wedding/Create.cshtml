@@ -1,0 +1,44 @@
+﻿@model Domain.ViewModels.WeddingViewModel
+
+@{
+    ViewData["Title"] = "Create Wedding";
+}
+
+<h2>Create Wedding</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="BrideName">Bride's Name</label>
+        <input type="text" id="BrideName" name="BrideName" class="form-control" asp-for="BrideName" />
+        <span asp-validation-for="BrideName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="GroomName">Groom's Name</label>
+        <input type="text" id="GroomName" name="GroomName" class="form-control" asp-for="GroomName" />
+        <span asp-validation-for="GroomName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="DateReservation">Reservation Date</label>
+        <input type="date" id="DateReservation" name="DateReservation" class="form-control" asp-for="DateReservation" />
+        <span asp-validation-for="DateReservation" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Type">Wedding Type</label>
+        <select id="Type" name="Type" class="form-control" asp-for="Type">
+            <option value="Traditional">Traditional</option>
+            <option value="Modern">Modern</option>
+        </select>
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Wedding</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

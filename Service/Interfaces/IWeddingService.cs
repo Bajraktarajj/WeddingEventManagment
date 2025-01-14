@@ -7,5 +7,7 @@ namespace Service.Interfaces
         Task<Wedding> GetById(int id, CancellationToken cancellationToken);
 
         Task<List<Wedding>> GetAll(CancellationToken cancellationToken);
+
+        Wedding CreateWedding(string type);
     }
 }
