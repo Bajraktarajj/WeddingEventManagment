@@ -6,9 +6,9 @@ namespace Presistent
     public class WeedingEventManagmentDbContext : DbContext
     {
         public WeedingEventManagmentDbContext(DbContextOptions<WeedingEventManagmentDbContext> options)
-            : base(options) {
-        }
-        
-        public virtual DbSet<Wedding> Wedding { get; set; }
+            : base(options) { }
+
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Wedding> Wedding { get; set; }
     }
 }

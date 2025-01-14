@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model Domain.Models.Contact
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -157,14 +159,18 @@
 
     <!-- Contact Section -->
     <div class="container">
-        <section id="contact">
-            <h2 style="text-align: center;">Contact Us</h2>
-            <form style="max-width: 600px; margin: 0 auto; text-align: center;">
-                <input type="text" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ddd;">
-                <input type="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ddd;">
-                <textarea placeholder="Your Message" rows="5" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
-                <button type="submit" style="background-color: #ff6f61; color: white; border: none; padding: 10px 20px; font-size: 18px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Send</button>
-            </form>
+        <form asp-controller="Contact" asp-action="SubmitContact" method="post" style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <input type="text" asp-for="Name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ddd;">
+            <span asp-validation-for="Name" class="text-danger"></span>
+
+            <input type="email" asp-for="Email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ddd;">
+            <span asp-validation-for="Email" class="text-danger"></span>
+
+            <textarea asp-for="Message" placeholder="Your Message" rows="5" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
+            <span asp-validation-for="Message" class="text-danger"></span>
+
+            <button type="submit" style="background-color: #ff6f61; color: white; border: none; padding: 10px 20px; font-size: 18px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Send</button>
+        </form>
         </section>
     </div>
 

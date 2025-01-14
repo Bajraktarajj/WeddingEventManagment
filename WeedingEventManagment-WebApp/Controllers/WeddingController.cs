@@ -19,7 +19,7 @@ namespace WeedingEventManagment_WebApp.Controllers
         public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken)
         {
             var getWeddingById = await _weddingService.GetById(id, cancellationToken);
-            return Ok(getWeddingById); 
+            return Ok(getWeddingById);
         }
 
         [HttpGet]
