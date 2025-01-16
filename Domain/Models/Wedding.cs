@@ -1,6 +1,6 @@
 ﻿namespace Domain.Models
 {
-    // Kjo është klasa e fabrikes që krijon dasma të ndryshme
+   
     public abstract class Wedding
     {
         public int Id { get; set; }
