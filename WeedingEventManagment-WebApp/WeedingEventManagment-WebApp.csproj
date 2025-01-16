@@ -8,11 +8,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Content Remove="Views\Home\Login.cshtml" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="Views\Home\Login.cshtml" />
 		<None Include="wwwroot\img\after-s.png" />
 		<None Include="wwwroot\img\coupleee.png" />
 	</ItemGroup>
@@ -25,13 +20,4 @@
 		<ProjectReference Include="..\Service\Service.csproj" />
 		<ProjectReference Include="..\Domain\Domain.csproj" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <UpToDateCheckInput Remove="Views\Home\Login.cshtml" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <_ContentIncludedByDefault Remove="Views\Home\Login.cshtml" />
-	</ItemGroup>
-
 </Project>
